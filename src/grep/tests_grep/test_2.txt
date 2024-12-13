@@ -1,0 +1,16 @@
+void Grep_optI(Grep_opt *opt, GrepString *pattern, int *reti,
+               char *search_string, int i) {
+  regex_t regex;
+  if (opt->i == 1) {
+    *reti = regcomp(&regex, pattern->string[i], REG_ICASE);
+    *reti = regexec(&regex, search_string, 0, NULL, 0);
+  } else {
+void GrepPerform(FILE *ptr, Grep_opt *opt, GrepString *pattern,
+                 GrepString *file, int numb) {
+  int reti;
+  int reti2;
+  int flag = 1;
+  char search_string[4059];
+  int counter = 0;
+  int schet = 1;
+  int new_file = 0;

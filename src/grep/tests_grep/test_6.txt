@@ -1,0 +1,15 @@
+#include "s21_grep.h"
+
+int main(int argc, char *argv[]) {
+  int numb = 0;
+  Grep_opt opt = {0};
+  GrepString pattern = {0};
+  GrepString file = {0};
+
+  if (argc > 1) {
+    GrepParse(argc, &*argv, &opt, &pattern, &file);
+    for (int i = 0; i < (file.number); i++) {
+      FILE *ptr;
+      ptr = fopen(file.string[i], "r");
+      if (NULL == ptr) {
+        if (opt.s == 0) {

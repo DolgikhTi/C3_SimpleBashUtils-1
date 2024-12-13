@@ -1,0 +1,32 @@
+Use the Linux grep Command
+Suggest Edits
+
+This article explains how to start using the grep command in Linux®.
+What is grep?
+
+You use the grep command within a Linux or Unix-based system to perform text searches for a defined criteria of words or strings. grep stands for Globally search for a Regular Expression and Print it out.
+grep syntax
+
+The following example shows the basic command structure:
+
+grep 'string' filename(s)
+
+This command searches for and returns any lines of text that contain the given criteria string in filename(s).
+
+Options:
+
+You can add any of the following options individually or in combination to refine your search:
+
+    -i: Prints lines with matching criteria while ignores casing (Upper/Lowecase).
+    -l: Prints filenames only.
+    -n: Prints lines with matching criteria and line numbers.
+    -c: Prints count of lines with matching criteria.
+    -v: Prints lines not matching criteria (inverse search).
+    -w: Prints whole word matches.
+    -A n: Prints n lines after matches.
+    -B n: Prints n lines before matches.
+    -C n: Prints n lines before and after matches.
+
+Sample grep commands with output
+
+Example: file "example.txt" contains the following 5 lines:
